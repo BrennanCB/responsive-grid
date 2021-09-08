@@ -1,6 +1,31 @@
 {
   "version": 1,
   "projects": {
+    "responsive-grid": {
+      "projectType": "library",
+      "root": "libs/responsive-grid",
+      "sourceRoot": "libs/responsive-grid/src",
+      "prefix": "responsive-grid",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/responsive-grid"],
+          "options": {
+            "jestConfig": "libs/responsive-grid/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/responsive-grid/src/**/*.ts",
+              "libs/responsive-grid/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "responsive-grid-app": {
       "projectType": "application",
       "root": "apps/responsive-grid-app",
@@ -129,10 +154,12 @@
   "schematics": {
     "@nrwl/angular": {
       "application": {
-        "linter": "eslint"
+        "linter": "eslint",
+        "prefix": "bcb"
       },
       "library": {
-        "linter": "eslint"
+        "linter": "eslint",
+        "prefix": "bcb"
       },
       "storybook-configuration": {
         "linter": "eslint"
@@ -141,12 +168,14 @@
     "@nrwl/angular:application": {
       "style": "scss",
       "linter": "eslint",
+      "prefix": "bcb",
       "unitTestRunner": "jest",
       "e2eTestRunner": "cypress"
     },
     "@nrwl/angular:library": {
       "style": "scss",
       "linter": "eslint",
+      "prefix": "bcb",
       "unitTestRunner": "jest"
     },
     "@nrwl/angular:component": {

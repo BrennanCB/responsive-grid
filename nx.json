@@ -27,6 +27,9 @@
     ]
   },
   "projects": {
+    "responsive-grid": {
+      "tags": []
+    },
     "responsive-grid-app": {
       "tags": []
     },

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'responsive-grid-root',
+  selector: 'bcb-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
