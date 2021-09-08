@@ -27,6 +27,12 @@
     ]
   },
   "projects": {
+    "abstractions": {
+      "tags": []
+    },
+    "common": {
+      "tags": []
+    },
     "responsive-grid": {
       "tags": []
     },

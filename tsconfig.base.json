@@ -15,7 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@bcb/responsive-grid": ["libs/responsive-grid/src/index.ts"]
+      "@bcb/responsive-grid": ["libs/responsive-grid/src/index.ts"],
+      "@responsive-grid/abstractions": ["libs/abstractions/src/index.ts"],
+      "@responsive-grid/common": ["libs/common/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

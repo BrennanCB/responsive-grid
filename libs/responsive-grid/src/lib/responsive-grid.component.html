@@ -1,1 +1,66 @@
-<p>responsive-grid works!</p>
+<div
+  [class.md]="viewMode === 'md'"
+  [class.sm]="viewMode === 'sm' || viewMode === 'xs'"
+  class="grid"
+  slot="content">
+  <bcb-tile
+    [cols]="12"
+    [innerCols]="4"
+    class="rds-col-{{12}}">
+    1
+  </bcb-tile>
+
+  <bcb-tile
+    [cols]="6"
+    [innerCols]="4"
+    class="rds-col-{{6}}">
+    2
+  </bcb-tile>
+
+  <bcb-tile
+    [cols]="6"
+    [innerCols]="8"
+    class="rds-col-{{6}}">
+    3
+  </bcb-tile>
+
+  <bcb-tile
+    [cols]="8"
+    [innerCols]="4"
+    class="rds-col-{{6}}">
+    4
+  </bcb-tile>
+
+  <bcb-tile
+    [cols]="4"
+    [innerCols]="2"
+    class="rds-col-{{4}}">
+    5
+  </bcb-tile>
+  <bcb-tile
+    [cols]="6"
+    [innerCols]="3"
+    class="rds-col-{{6}}">
+    6
+  </bcb-tile>
+
+  <bcb-tile
+    [cols]="6"
+    [innerCols]="2"
+    class="rds-col-{{6}}">
+    7
+  </bcb-tile>
+
+  <bcb-tile
+    [cols]="4"
+    [innerCols]="2"
+    class="rds-col-{{4}}">
+    8
+  </bcb-tile>
+  <bcb-tile
+    [cols]="4"
+    [innerCols]="3"
+    class="rds-col-{{4}}">
+    9
+  </bcb-tile>
+</div>

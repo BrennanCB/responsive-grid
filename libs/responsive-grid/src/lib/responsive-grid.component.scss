@@ -1,0 +1,57 @@
+.grid {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 1.5rem;
+  overflow: auto;
+  max-height: 100%;
+
+  .rds-col-12 {
+    flex: 0 0 calc(100%);
+    max-width: calc(100% - 2rem);
+  }
+
+  .rds-col-8 {
+    flex: 0 0 75%;
+    max-width: calc(75% - 2rem);
+  }
+
+  .rds-col-4 {
+    flex: 0 0 25%;
+    max-width: calc(25% - 2rem);
+  }
+
+  .rds-col-6 {
+    flex: 0 0 50%;
+    max-width: calc(50% - 2rem);
+  }
+
+  &.md {
+    .rds-col-8 {
+      flex: 0 0 calc(100%);
+      max-width: calc(100% - 2rem);
+    }
+
+    .rds-col-6 {
+      flex: 0 0 75%;
+      max-width: calc(75% - 2rem);
+    }
+
+    .rds-col-4 {
+      flex: 0 0 50%;
+      max-width: calc(50% - 2rem);
+    }
+  }
+
+  &.sm {
+    .rds-col-8,
+    .rds-col-6,
+    .rds-col-4 {
+      flex: 0 0 calc(100%);
+      max-width: calc(100% - 2rem);
+    }
+  }
+
+}
+
+

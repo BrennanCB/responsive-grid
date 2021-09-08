@@ -1,6 +1,56 @@
 {
   "version": 1,
   "projects": {
+    "abstractions": {
+      "projectType": "library",
+      "root": "libs/abstractions",
+      "sourceRoot": "libs/abstractions/src",
+      "prefix": "bcb",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/abstractions"],
+          "options": {
+            "jestConfig": "libs/abstractions/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/abstractions/src/**/*.ts",
+              "libs/abstractions/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "common": {
+      "projectType": "library",
+      "root": "libs/common",
+      "sourceRoot": "libs/common/src",
+      "prefix": "bcb",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/common"],
+          "options": {
+            "jestConfig": "libs/common/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/common/src/**/*.ts",
+              "libs/common/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "responsive-grid": {
       "projectType": "library",
       "root": "libs/responsive-grid",
@@ -148,6 +198,7 @@
     }
   },
   "cli": {
+    "analytics": false,
     "defaultCollection": "@nrwl/angular",
     "packageManager": "npm"
   },
@@ -168,15 +219,15 @@
     "@nrwl/angular:application": {
       "style": "scss",
       "linter": "eslint",
-      "prefix": "bcb",
       "unitTestRunner": "jest",
-      "e2eTestRunner": "cypress"
+      "e2eTestRunner": "cypress",
+      "prefix": "bcb"
     },
     "@nrwl/angular:library": {
       "style": "scss",
       "linter": "eslint",
-      "prefix": "bcb",
-      "unitTestRunner": "jest"
+      "unitTestRunner": "jest",
+      "prefix": "bcb"
     },
     "@nrwl/angular:component": {
       "style": "scss"
