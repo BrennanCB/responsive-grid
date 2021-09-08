@@ -20,7 +20,7 @@ export class LayoutService {
     '(min-width: 1920px)': 'xxl'
   };
 
-  private _activeBreakpoint: ViewMode = undefined;
+  private _activeBreakpoint?: ViewMode = undefined;
 
   constructor(
     private _breakpointObserver: BreakpointObserver
@@ -30,14 +30,14 @@ export class LayoutService {
     this._activeBreakpoint = undefined;
     const breakpointKeys: string[] = Object.keys(breakpoints);
 
-    for (let i: number = 0; i < breakpointKeys.length; i++) {
+    for (let i = 0; i < breakpointKeys.length; i++) {
       if (breakpoints[breakpointKeys[i]]) {
         this._activeBreakpoint = this._breakpoints[breakpointKeys[i]];
         break;
       }
     }
 
-    return this._activeBreakpoint;
+    return this._activeBreakpoint ?? 'xs';
   }
 
   public relativeBreakpointChanges(observedElement: HTMLElement, debounce: number = 50): Observable<ViewMode> {
